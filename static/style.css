@@ -1,0 +1,126 @@
+html {
+  font-family: "Fira Sans", sans-serif;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background: #e3edf7;
+  overflow: hidden;
+}
+
+body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2rem 4rem;
+  overflow: auto;
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1000px) {
+  .sections {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+
+#title {
+  text-align: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.examples {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 600px) {
+  .examples {
+    flex-direction: column;
+  }
+  .examples > *:nth-child(n + 2) {
+    margin-left: 0 !important;
+  }
+}
+
+.example {
+  margin: 1rem 0;
+  padding: 1rem 0;
+}
+
+.examples > *:nth-child(n + 2) {
+  margin-left: 1rem;
+}
+
+button {
+  padding: 8px 16px;
+  margin: 0;
+  border: none;
+  outline: none;
+  border-radius: 16px;
+  background: #e3edf7;
+  cursor: pointer;
+  box-shadow: 4px 2px 16px rgba(136, 165, 191, 0.48), -4px -2px 16px #ffffff;
+}
+
+button.pressed {
+  box-shadow: inset 3px 3px 7px rgba(136, 165, 191, 0.48),
+    inset -3px -3px 7px #ffffff;
+}
+
+button.focused {
+  box-shadow: 8px 4px 16px rgba(136, 165, 191, 0.48), -8px -4px 16px #ffffff;
+}
+
+button:focus {
+  box-shadow: 8px 4px 16px rgba(136, 165, 191, 0.48), -8px -4px 16px #ffffff;
+}
+
+button:active {
+  box-shadow: inset 3px 3px 7px rgba(136, 165, 191, 0.48),
+    inset -3px -3px 7px #ffffff;
+}
+
+.card {
+  padding: 1rem 1rem;
+  background: linear-gradient(200.6deg, #ebf2f9 19.14%, #c6d7eb 154.68%);
+  box-shadow: 16px 4px 64px rgba(18, 61, 101, 0.3),
+    -16px -16px 40px rgba(255, 255, 255, 0.8),
+    inset -8px -6px 80px rgba(255, 255, 255, 0.18);
+  border-radius: 24px;
+  max-width: 225px;
+  max-height: 375px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card p {
+  overflow: auto;
+  flex: 1;
+}
+
+.inputfield {
+  border-radius: 16px;
+  background: #e3edf7;
+  box-shadow: 4px 2px 16px rgba(136, 165, 191, 0.48), -4px -2px 16px #ffffff;
+}
+
+input {
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  background: #e3edf7;
+  box-shadow: inset 2px 2px 5px rgba(136, 165, 191, 0.38),
+    inset -3px -3px 7px #ffffff;
+  border-radius: 16px;
+}
